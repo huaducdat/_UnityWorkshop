@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour
     public int score { get; private set; }
     private float time;
 
+    public int level = 0;
     void Awake()
     {
         // khởi tạo instance
@@ -32,7 +33,7 @@ public class GameManager : MonoBehaviour
     void InitGame()
     {
         // gọi sang Board Manager
-        boardScript.SetupScene(1);
+        boardScript.SetupScene(level);
         score = 0;
         time = 0;
         ScoreText.text = score.ToString();

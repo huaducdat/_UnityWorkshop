@@ -12,9 +12,8 @@ public class GenerateLevel : MonoBehaviour
     private Dictionary<float, List<LayoutElementPosY>> LayoutGroups = new Dictionary<float, List<LayoutElementPosY>>();
     ElementPosition currentPosition;
 
-    public float HeadPositionPresentPosX;
-    public float HeadPositionPresentPosY;
 
+    public int sceneLevel = 0;
    
   
 
@@ -26,9 +25,13 @@ public class GenerateLevel : MonoBehaviour
 
     private void GenerateListElement()
     {
+       
+
+
         for (int i = 0; i < elementParent.childCount; i++)
         {
             currentPosition = GetElementPosition(elementParent.GetChild(i).position);
+            Debug.LogError(elementParent.GetChild(i).position);
             if(LayoutGroups.ContainsKey(currentPosition.xPos))
             {
                 LayoutGroups[currentPosition.xPos].Add(new LayoutElementPosY
@@ -55,14 +58,16 @@ public class GenerateLevel : MonoBehaviour
 
     private ElementPosition GetElementPosition(Vector3 elementPos)
     {
-        return new ElementPosition { xPos = Mathf.RoundToInt((elementPos.x + HeadPositionPresentPosX) / 1.3f), yPos = -Mathf.RoundToInt((elementPos.y + HeadPositionPresentPosY) / 1.3f) };
+       
+
+        return new ElementPosition { xPos = elementPos.x, yPos = elementPos.y};
     }
 
 
     private LayoutData layoutData = new LayoutData();
     private void WriteJsonLayoutData()
     {
-        string connectionString = Application.persistentDataPath + "/" + "Level_.json";
+        string connectionString = Application.persistentDataPath + "/" + string.Format("Level_{0}.json", sceneLevel);
         string json = JsonConvert.SerializeObject(layoutData);
         Debug.LogError(connectionString);
         File.WriteAllText(connectionString, json);
@@ -71,6 +76,6 @@ public class GenerateLevel : MonoBehaviour
 
 public class ElementPosition
 {
-    public int xPos;
-    public int yPos;
+    public float xPos;
+    public float yPos;
 }

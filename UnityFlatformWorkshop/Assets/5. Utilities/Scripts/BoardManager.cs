@@ -11,10 +11,9 @@ public class BoardManager : MonoBehaviour
     private List<LayoutElementPos> gridPositions = new List<LayoutElementPos>(); // danh sách các vị trí để init cho ground
     private LayoutData layoutData = new LayoutData();
 
-    public float ReloadHeadPositionPresentPosX;
-    public float ReloadHeadPositionPresentPosY;
-
-    private GenerateLevel headPosition;
+   
+    
+    
 
     public void SetupScene(int Level)
     {
@@ -33,8 +32,8 @@ public class BoardManager : MonoBehaviour
             {
                 gridPositions.Add(new LayoutElementPos
                 {
-                    PosX = -ReloadHeadPositionPresentPosX + keyValuePair.Key * 1.3f,
-                    PosY = -ReloadHeadPositionPresentPosY - keyValuePair.Value[i].PosY * 1.3f,
+                    PosX =keyValuePair.Key,
+                    PosY =keyValuePair.Value[i].PosY ,
                     ElementNo = keyValuePair.Value[i].ElementNo
                 });
             }
@@ -49,7 +48,7 @@ public class BoardManager : MonoBehaviour
         // khởi tạo ground
         for (int i = 0; i < gridPositions.Count; i++)
         {
-            GameObject instance = Instantiate(blockPrefabs[gridPositions[i].ElementNo], new Vector3(gridPositions[i].PosX, gridPositions[i].PosY,-1), Quaternion.identity) as GameObject;
+            GameObject instance = Instantiate(blockPrefabs[gridPositions[i].ElementNo], new Vector3(gridPositions[i].PosX, gridPositions[i].PosY, -1), Quaternion.identity) as GameObject;
             instance.transform.SetParent(boardHolder);
         }
     }
@@ -74,7 +73,7 @@ public class LayoutData
 
 public class LayoutElementPosY
 {
-    public int PosY; // vị trí theo Y được init (theo ô bàn cờ)
+    public float PosY; // vị trí theo Y được init (theo ô bàn cờ)
     public int ElementNo; // dùng để xác định được element nào sẽ được init
 }
 

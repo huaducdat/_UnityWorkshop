@@ -10,6 +10,7 @@ public class MovingCamera : MonoBehaviour
     private bool CanMove = true;
     [SerializeField] private MovingBackground[] movingBackgrounds;
     private float deltaX = 0;
+    [SerializeField]
     private Vector3 backgroundStep = new Vector3(23, 0, 0);
 
     void InputDirection()
