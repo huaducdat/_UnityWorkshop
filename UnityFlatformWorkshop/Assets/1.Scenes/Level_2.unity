@@ -374,6 +374,7 @@ MonoBehaviour:
   - {fileID: 1684379986}
   - {fileID: 2083157976}
   - {fileID: 281848490}
+  backgroundStep: {x: 23, y: 0, z: 0}
 --- !u!1 &1684379985
 GameObject:
   m_ObjectHideFlags: 0
