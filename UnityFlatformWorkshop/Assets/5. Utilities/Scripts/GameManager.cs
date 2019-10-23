@@ -24,7 +24,7 @@ public class GameManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
 
         //lấy reference của board manager (ngoài ra còn cách kéo thả thông qua inspector
-        //boardScript = GetComponent<BoardManager>();
+        boardScript = GetComponent<BoardManager>();
 
         // gọi hàm InitGame
         InitGame();

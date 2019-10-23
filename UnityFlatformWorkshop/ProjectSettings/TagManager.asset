@@ -13,7 +13,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - Player
   - 
   - 
   - 
@@ -46,4 +46,7 @@ TagManager:
     locked: 0
   - name: Blocks
     uniqueID: 3313519601
+    locked: 0
+  - name: Player
+    uniqueID: 79211567
     locked: 0
