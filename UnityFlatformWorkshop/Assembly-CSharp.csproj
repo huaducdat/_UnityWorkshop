@@ -231,6 +231,7 @@
     <Compile Include="Assets\7.2DxFX\Scripts\2dxfx_AL\_2dxFX_AL_Threshold.cs" />
     <Compile Include="Assets\7.2DxFX\Scripts\2dxfx_AL\_2dxFX_AL_Twist.cs" />
     <Compile Include="Assets\7.2DxFX\Scripts\2dxfx_AL\_2dxFX_AL_WoodFX.cs" />
+    <Compile Include="Assets\9.Bullet\Scritps\AimOneControl.cs" />
     <Compile Include="Assets\9.Bullet\Scritps\BaseBullet.cs" />
     <Compile Include="Assets\9.Bullet\Scritps\BulletControl.cs" />
     <Compile Include="Assets\9.Bullet\Scritps\CricleControl.cs" />

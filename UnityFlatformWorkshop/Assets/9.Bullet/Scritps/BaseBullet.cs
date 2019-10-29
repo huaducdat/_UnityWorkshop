@@ -8,6 +8,7 @@ public class BaseBullet : MonoBehaviour
 
 
     #region
+    public float _gravityScale = 0;
     private BaseBullet baseBullet;
     private BaseBullet currentBullet;
 
@@ -27,6 +28,13 @@ public class BaseBullet : MonoBehaviour
     #endregion
 
 
+
+    public void SetBulletGravity()
+    {
+        currentBullet.GetComponent<Rigidbody2D>().gravityScale = _gravityScale;
+    }
+
+
     public void SetBulletControl(BulletControl controlBase)
     {
         bulletControl = controlBase;
@@ -41,7 +49,7 @@ public class BaseBullet : MonoBehaviour
 
 
 
-    void Init()
+    void InitBaseBullet()
     {
         currentBullet = SimplePool.Spawn(baseBullet, shotPos.position, Quaternion.identity);     
     }
@@ -101,6 +109,18 @@ public class BaseBullet : MonoBehaviour
 
         lastPos = currentBullet.transform.position;
     }
+
+
+
+
+
+
+
+
+
+
+
+
 
     // Start is called before the first frame update
     //void Start()

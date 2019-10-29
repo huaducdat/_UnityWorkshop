@@ -5,11 +5,11 @@ using DG.Tweening;
 
 public class CricleControl : BulletControl
 {
-    public Transform shootPos;
+    //public Transform shootPos;
     public int numLineBullet;
-    [SerializeField]
-    private BaseBullet prefabBullet;
-    private BaseBullet currentBullet;
+    //[SerializeField]
+    //private BaseBullet prefabBullet;
+    //private BaseBullet currentBullet;
 
     private Tween rotateTween;
    
@@ -18,7 +18,7 @@ public class CricleControl : BulletControl
     {
         for(int i = 0; i < numLineBullet; i++)
         {
-            currentBullet = SimplePool.Spawn(prefabBullet, shootPos.position, Quaternion.identity);
+           
             DirecShoot.x = Mathf.Cos(360 / numLineBullet * i);
             DirecShoot.y = Mathf.Sin(360 / numLineBullet * i);
             InitBulletInControl(DirecShoot, AngleShoot, Velocity, MoveTweenSpeed, Damage);
