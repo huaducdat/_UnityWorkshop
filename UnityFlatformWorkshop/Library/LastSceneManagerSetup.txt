@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/1.Scenes/CamareControlScence.unity
+- path: Assets/1.Scenes/BulletScene.unity
   isLoaded: 1
   isActive: 1

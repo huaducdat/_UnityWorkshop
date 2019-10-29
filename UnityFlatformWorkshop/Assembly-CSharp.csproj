@@ -71,6 +71,7 @@
     <Compile Include="Assets\5. Utilities\Scripts\GameManager.cs" />
     <Compile Include="Assets\5. Utilities\Scripts\Generate Level Scripts\ElementInfor.cs" />
     <Compile Include="Assets\5. Utilities\Scripts\Generate Level Scripts\GenerateLevel.cs" />
+    <Compile Include="Assets\5. Utilities\Scripts\IActor.cs" />
     <Compile Include="Assets\5. Utilities\Scripts\MovingBackground.cs" />
     <Compile Include="Assets\5. Utilities\Scripts\MovingCamera.cs" />
     <Compile Include="Assets\5. Utilities\Scripts\ScriptableObject\ControlInfor.cs" />
@@ -230,6 +231,9 @@
     <Compile Include="Assets\7.2DxFX\Scripts\2dxfx_AL\_2dxFX_AL_Threshold.cs" />
     <Compile Include="Assets\7.2DxFX\Scripts\2dxfx_AL\_2dxFX_AL_Twist.cs" />
     <Compile Include="Assets\7.2DxFX\Scripts\2dxfx_AL\_2dxFX_AL_WoodFX.cs" />
+    <Compile Include="Assets\9.Bullet\Scritps\BaseBullet.cs" />
+    <Compile Include="Assets\9.Bullet\Scritps\BulletControl.cs" />
+    <Compile Include="Assets\9.Bullet\Scritps\CricleControl.cs" />
     <Compile Include="Assets\Demigiant\DOTweenPro\DOTweenAnimation.cs" />
     <Compile Include="Assets\unity-ui-extensions\Examples\ComboBox\ComboBoxChanged.cs" />
     <Compile Include="Assets\unity-ui-extensions\Examples\Cooldown\CooldownEffect_Image.cs" />
