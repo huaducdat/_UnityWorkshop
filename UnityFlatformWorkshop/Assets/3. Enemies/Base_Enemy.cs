@@ -9,7 +9,7 @@ public class Base_Enemy : MonoBehaviour, IActor
     [SerializeField]
     protected Animator animator;
 
-    private bool isChangeColor;
+    protected bool isChangeColor;
 
     private Collider2D collider2D;
 
@@ -55,7 +55,7 @@ public class Base_Enemy : MonoBehaviour, IActor
     }
 
     [ContextMenu("___takedame")]
-    protected void Test()
+    protected virtual void Test()
     {
         isChangeColor = true;
     }
@@ -118,8 +118,8 @@ public class Base_Enemy : MonoBehaviour, IActor
     public int channelR = 255;
     public int channelG = 160;
     public int channelB = 128;
-    public int channelA = 90;
-    void HurtColor()
+    //public int channelA = 90;
+    protected virtual void HurtColor()
     {
        
 
@@ -128,7 +128,7 @@ public class Base_Enemy : MonoBehaviour, IActor
         if (timeCount <= timeHurt / 2)
         {
             tempTime += Time.deltaTime;
-            color.a = 1 - tempTime / mauSoX(channelA);
+            //color.a = 1 - tempTime / mauSoX(channelA);
             color.r = 1 - tempTime / mauSoX(channelR);
             color.g = 1 - tempTime / mauSoX(channelG);
             color.b = 1 - tempTime / mauSoX(channelB);
@@ -140,7 +140,7 @@ public class Base_Enemy : MonoBehaviour, IActor
         if (timeCount > timeHurt / 2)
         {
             tempTime -= Time.deltaTime;
-            color.a = 1 - tempTime / mauSoX(channelA);
+            //color.a = 1 - tempTime / mauSoX(channelA);
             color.r = 1 - tempTime / mauSoX(channelR);
             color.g = 1 - tempTime / mauSoX(channelG);
             color.b = 1 - tempTime / mauSoX(channelB);
@@ -156,8 +156,8 @@ public class Base_Enemy : MonoBehaviour, IActor
             isChangeColor = !isChangeColor;
         }
 
-        Debug.LogError(timeCount);
-        Debug.LogError(isChangeColor);
+        Debug.Log(timeCount);
+        Debug.Log("IsChangeColor" + isChangeColor);
     }
 
 
@@ -183,7 +183,7 @@ public class Base_Enemy : MonoBehaviour, IActor
    
    
 
-    protected void Update()
+    protected virtual void Update()
     {
         
         if (isChangeColor) HurtColor();

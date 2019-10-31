@@ -47,10 +47,13 @@ public class Bird : Base_Enemy
         
     }
 
-    private void Update()
+    protected override void Update()
     {
+        base.Update();
         Attack();
     }
+
+
     void TransformPos()
     {
         xPos = transform.position.x;
@@ -137,8 +140,8 @@ public class Bird : Base_Enemy
             GameObject eggIns = Instantiate(Egg, shootPos.position, Quaternion.identity) as GameObject;
         
     }
-  
 
+   
 
     //private void Update()
     //{

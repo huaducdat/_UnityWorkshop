@@ -346,5 +346,30 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1934842070}
+    - target: {fileID: 4523408214325232877, guid: decb01ce2ea717b4ca152c1e93f74642,
+        type: 3}
+      propertyPath: channelG
+      value: 241
+      objectReference: {fileID: 0}
+    - target: {fileID: 4523408214325232877, guid: decb01ce2ea717b4ca152c1e93f74642,
+        type: 3}
+      propertyPath: channelB
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4523408214325232879, guid: decb01ce2ea717b4ca152c1e93f74642,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4523408214325232879, guid: decb01ce2ea717b4ca152c1e93f74642,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4523408214325232879, guid: decb01ce2ea717b4ca152c1e93f74642,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: decb01ce2ea717b4ca152c1e93f74642, type: 3}
