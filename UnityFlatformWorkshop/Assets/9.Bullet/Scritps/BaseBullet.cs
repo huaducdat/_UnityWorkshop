@@ -28,6 +28,31 @@ public class BaseBullet : MonoBehaviour
     #endregion
 
 
+    private Vector3 lastPos;
+    private void OnEnable()
+    {
+        lastPos = currentBullet.transform.position;
+    }
+
+    private void Update()
+    {
+        if (lastPos != currentBullet.transform.position)
+        {
+            float angle = Vector3.SignedAngle(Vector3.right, currentBullet.transform.position - lastPos, Vector3.forward);
+            currentBullet.transform.localEulerAngles = new Vector3(0, 0, angle);
+        }
+
+        lastPos = currentBullet.transform.position;
+    }
+
+
+
+
+
+
+
+
+
 
     public void SetBulletGravity()
     {
@@ -93,22 +118,7 @@ public class BaseBullet : MonoBehaviour
         }
     }
 
-    private Vector3 lastPos;
-    private void OnEnable()
-    {
-        lastPos = currentBullet.transform.position;
-    }
-
-    private void Update()
-    {
-        if(lastPos != currentBullet.transform.position)
-        {
-            float angle = Vector3.SignedAngle(Vector3.right, currentBullet.transform.position - lastPos, Vector3.forward);
-            currentBullet.transform.localEulerAngles = new Vector3(0, 0, angle);
-        }
-
-        lastPos = currentBullet.transform.position;
-    }
+  
 
 
 

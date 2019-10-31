@@ -63,7 +63,9 @@
     <Compile Include="Assets\2. Player\newScripts\PlayerMove.cs" />
     <Compile Include="Assets\2. Player\Scripts\CharacterController2D.cs" />
     <Compile Include="Assets\2. Player\Scripts\PlayerMovement.cs" />
+    <Compile Include="Assets\3. Enemies\Base_Enemy.cs" />
     <Compile Include="Assets\3. Enemies\Enemy1\Scripts\EnemyMove.cs" />
+    <Compile Include="Assets\3. Enemies\enemy2\scripts\Bird.cs" />
     <Compile Include="Assets\3. Enemies\Scripts\BaseEnemy.cs" />
     <Compile Include="Assets\3. Enemies\Scripts\SpawnScripts\EnemyDB.cs" />
     <Compile Include="Assets\3. Enemies\Scripts\SpawnScripts\TestScriptableObject.cs" />
