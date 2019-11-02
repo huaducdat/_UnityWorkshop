@@ -115,6 +115,7 @@ public class Bird : Base_Enemy
 
         if(distance <= attackRange)
         {
+            xPos = player.position.x;
             animator.SetBool("IsAttack", true);
             
            
