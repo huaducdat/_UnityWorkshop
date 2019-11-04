@@ -24,33 +24,61 @@ public class Base_Enemy : MonoBehaviour, IActor
     private float tempTime;
     private float timeCount;
 
+    //Spine
+    public bool isSpine;
+    [SerializeField]
+    private MeshRenderer meshRenderer;
+    private MaterialPropertyBlock materialPropertyBlock;
+    private Color hitColor = Color.white;
+    private Color normalColorSpine = Color.black;
 
-    protected virtual void Start()
-    {
-        currentHealth = health;
-        collider2D = GetComponent<Collider2D>();
-        animator = GetComponent<Animator>();
-        colorHurt = GetComponent<SpriteRenderer>();
-        rigidbody = GetComponent<Rigidbody2D>();
-    }
+    //enum Action
+    protected EnemyAction currentAction;
+
+
+  
 
     protected virtual void OnEnable()
     {
         currentHealth = health;
         animator.SetBool("IsDie", false);
 
-        try
+        if (!isSpine)
         {
-            normalColor.a = 1;
-            normalColor.r = 1;
-            normalColor.b = 1;
-            normalColor.g = 1;
-            colorHurt.color = normalColor;
+            normalColor = Color.white;
+            try
+            {
+                normalColor.a = 1;
+                normalColor.r = 1;
+                normalColor.b = 1;
+                normalColor.g = 1;
+                colorHurt.color = normalColor;
+            }
+            catch
+            {
+                Debug.LogError("!!!!!!");
+            }
         }
-        catch
+        else if(isSpine)
         {
-            Debug.LogError("!!!!!!");
+            hitColor = Color.white;
+            normalColor = Color.black;
+            try
+            {
+                hitColor.a = 1f;
+                normalColor.a = 1f;
+                materialPropertyBlock.SetColor("_Color", Color.white);
+                materialPropertyBlock.SetColor("_Black", normalColor);
+                meshRenderer.SetPropertyBlock(materialPropertyBlock);
+            }
+            catch
+            {
+                Debug.LogError("!!!!!!!");
+            }
         }
+
+
+
 
     }
 
@@ -68,6 +96,16 @@ public class Base_Enemy : MonoBehaviour, IActor
         isChangeColor = true;
     }
 
+
+    protected virtual void Start()
+    {
+        currentHealth = health;
+        collider2D = GetComponent<Collider2D>();
+        animator = GetComponent<Animator>();
+        colorHurt = GetComponent<SpriteRenderer>();
+        rigidbody = GetComponent<Rigidbody2D>();
+        materialPropertyBlock = new MaterialPropertyBlock();
+    }
 
 
     public void OnDeath()
@@ -121,43 +159,72 @@ public class Base_Enemy : MonoBehaviour, IActor
     //public int channelA = 90;
     protected virtual void HurtColor()
     {
-       
 
-
-        timeCount += Time.deltaTime;
-        if (timeCount <= timeHurt / 2)
+        if (!isSpine)
         {
-            tempTime += Time.deltaTime;
-            //color.a = 1 - tempTime / mauSoX(channelA);
-            color.r = 1 - tempTime / mauSoX(channelR);
-            color.g = 1 - tempTime / mauSoX(channelG);
-            color.b = 1 - tempTime / mauSoX(channelB);
-            colorHurt.color = color;           
+
+            timeCount += Time.deltaTime;
+            if (timeCount <= timeHurt / 2)
+            {
+                tempTime += Time.deltaTime;
+                //color.a = 1 - tempTime / mauSoX(channelA);
+                color.r = 1 - tempTime / mauSoX(channelR);
+                color.g = 1 - tempTime / mauSoX(channelG);
+                color.b = 1 - tempTime / mauSoX(channelB);
+                colorHurt.color = color;
+            }
+
+
+
+            if (timeCount > timeHurt / 2)
+            {
+                tempTime -= Time.deltaTime;
+                //color.a = 1 - tempTime / mauSoX(channelA);
+                color.r = 1 - tempTime / mauSoX(channelR);
+                color.g = 1 - tempTime / mauSoX(channelG);
+                color.b = 1 - tempTime / mauSoX(channelB);
+                colorHurt.color = color;
+            }
+
+
+
+            if (timeCount > timeHurt)
+            {
+                tempTime = 0;
+                timeCount = 0;
+                isChangeColor = !isChangeColor;
+            }
+
+            Debug.Log(timeCount);
+            Debug.Log("IsChangeColor" + isChangeColor);
         }
-
-
-
-        if (timeCount > timeHurt / 2)
+        else if(isSpine)
         {
-            tempTime -= Time.deltaTime;
-            //color.a = 1 - tempTime / mauSoX(channelA);
-            color.r = 1 - tempTime / mauSoX(channelR);
-            color.g = 1 - tempTime / mauSoX(channelG);
-            color.b = 1 - tempTime / mauSoX(channelB);
-            colorHurt.color = color;
+            timeCount += Time.deltaTime;
+            if(timeCount <= timeHurt/2)
+            {
+                hitColor.a = timeCount / (timeHurt / 2);
+                materialPropertyBlock.SetColor("_Black", hitColor);
+                meshRenderer.SetPropertyBlock(materialPropertyBlock);
+            }
+            if(timeCount > timeHurt)
+            {
+                tempTime += Time.deltaTime;
+                normalColorSpine.a = (tempTime*2) / timeHurt;
+                materialPropertyBlock.SetColor("_Black", normalColorSpine);
+                meshRenderer.SetPropertyBlock(materialPropertyBlock);
+            }
+
+
+            if(timeCount > timeHurt)
+            {
+                tempTime = 0;
+                timeCount = 0;
+                isChangeColor = !isChangeColor;
+                currentAction = EnemyAction.Idle;
+            }
         }
-
-
-        
-        if (timeCount > timeHurt)
-        {
-            tempTime = 0;
-            timeCount = 0;
-            isChangeColor = !isChangeColor;
-        }
-
-        Debug.Log(timeCount);
-        Debug.Log("IsChangeColor" + isChangeColor);
+      
     }
 
 
@@ -200,4 +267,17 @@ public class Base_Enemy : MonoBehaviour, IActor
     //{
 
     //}
+}
+
+
+
+public enum EnemyAction
+{
+    OnSpawning,
+    Idle,
+    Hurt,
+    Run,
+    Hit,
+    Jump,
+    Die
 }
