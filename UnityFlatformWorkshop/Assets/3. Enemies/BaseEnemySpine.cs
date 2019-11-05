@@ -148,7 +148,7 @@ public class BaseEnemySpine : Base_Enemy
 
 
 
-   void OnAnimationComplete(TrackEntry entry)
+    protected virtual void OnAnimationComplete(TrackEntry entry)
     {
         switch(currentAction)
         {
@@ -198,7 +198,7 @@ public class BaseEnemySpine : Base_Enemy
 
 
 
-    void SetAnimation(string ani, bool isLoop)
+    protected virtual void SetAnimation(string ani, bool isLoop)
     {
         if(ani == idle)
         {
@@ -268,6 +268,8 @@ public class BaseEnemySpine : Base_Enemy
 
     protected void SetRun()
     {
+        currentAction = EnemyAction.Run;
+        skeletonAni.state.ClearTrack(0);
         SetAnimation(run, true);
     }
 

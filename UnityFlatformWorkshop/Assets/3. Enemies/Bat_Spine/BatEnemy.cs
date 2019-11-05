@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using Spine;
 
 public class BatEnemy : BaseEnemySpine
 {
@@ -19,7 +20,8 @@ public class BatEnemy : BaseEnemySpine
     //private float yPos;
     public float deltaDistance = 3;
     private float tempStep;
-
+    private bool isRunAni;
+    private int countAni;
 
     protected override void Awake()
     {
@@ -51,28 +53,62 @@ public class BatEnemy : BaseEnemySpine
     //    yPos = transform.position.y;
     //}
 
-    
+
+
+    protected override void OnAnimationComplete(TrackEntry entry)
+    {
+        switch (currentAction)
+        {
+            case EnemyAction.Hit:
+                SetRun();
+                break;
+            case EnemyAction.Hurt:
+                SetIdle();
+                break;
+            case EnemyAction.Run:
+                //SetIdle();
+                break;
+            case EnemyAction.Idle:
+                break;
+
+        }
+
+        if (string.CompareOrdinal(entry.animation.name, die) == 0)
+        {
+            DeSpawnOnDead();
+        }
+    }
+
+
+
 
     protected override void FindPlayer()
     {
-        tempStep += step / 5 * Time.deltaTime;
-        if (tempStep < deltaDistance)
-        {
-            TurnRight();
-            transform.position += new Vector3(step / 5 * Time.deltaTime, 0, 0);
-        }
-        if (tempStep >= deltaDistance)
-        {
-            TurnLeft();
-            transform.position -= new Vector3(step / 5 * Time.deltaTime, 0, 0);
-        }
-
-        if (tempStep >= 2 * deltaDistance) tempStep = 0;
-
         float distance = Vector3.Distance(player.transform.position, transform.position);
+
+        if (distance > rangeFind)
+        {
+            tempStep += step / 7 * Time.deltaTime;
+           
+            if (tempStep < deltaDistance)
+            {
+                TurnRight();
+                transform.position += new Vector3(step / 7 * Time.deltaTime, 0, 0);
+            }
+            if (tempStep >= deltaDistance)
+            {
+                TurnLeft();
+                transform.position -= new Vector3(step / 7 * Time.deltaTime, 0, 0);
+            }
+
+            if (tempStep >= 2 * deltaDistance) tempStep = 0;
+        }
+       
         //Debug.Log(distance);
         if (distance < rangeFind && distance > rangeRun && !isRun && count == 0)
         {
+            isRunAni = true;
+            countAni++;
             
             if(player.transform.position.x < transform.position.x)
             {
@@ -83,8 +119,8 @@ public class BatEnemy : BaseEnemySpine
                 TurnRight();
             }
             transform.position = Vector3.MoveTowards(transform.position, player.transform.position, step/5 * Time.deltaTime);
-            SetRun();
-
+            
+           
             if (!wasFire)
             {
                 wasFire = true;
@@ -93,6 +129,19 @@ public class BatEnemy : BaseEnemySpine
             }
 
         }
+
+
+        if (countAni >= 2) countAni = 2;
+        if(isRunAni && countAni == 1)
+        {
+            SetRun();
+        }
+
+      
+
+
+
+
 
 
 
@@ -106,8 +155,8 @@ public class BatEnemy : BaseEnemySpine
         if (isRun)
         {
             Vector3 dir = transform.position - player.transform.position;
-            transform.position += dir.normalized * step/5 * Time.deltaTime;
-            tempDeltaRun += step/5 * Time.deltaTime;
+            transform.position += dir.normalized * step/2 * Time.deltaTime;
+            tempDeltaRun += step/2 * Time.deltaTime;
         }
 
         if(tempDeltaRun >= deltaRun)
@@ -117,8 +166,14 @@ public class BatEnemy : BaseEnemySpine
             count = 1;
         }
 
+
+
+
+
         if (!isRun && count == 1)
         {
+           
+
             if (player.transform.position.x < transform.position.x)
             {
                 TurnLeft();
@@ -133,10 +188,10 @@ public class BatEnemy : BaseEnemySpine
             {
                 wasFire = true;
                 Fire();
-
+                
             }
 
-
+           
         }
 
 
@@ -145,12 +200,15 @@ public class BatEnemy : BaseEnemySpine
         if (wasFire)
         {
             tempTime += Time.deltaTime;
+            
         }
         if (tempTime >= timeFireCD)
         {
             wasFire = false;
             tempTime = 0;
+           
         }
+
 
     }
 
