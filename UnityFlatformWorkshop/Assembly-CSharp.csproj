@@ -67,7 +67,8 @@
     <Compile Include="Assets\3. Enemies\BaseEnemySpine.cs" />
     <Compile Include="Assets\3. Enemies\Bat_Spine\BatEnemy.cs" />
     <Compile Include="Assets\3. Enemies\Enemy1\Scripts\EnemyMove.cs" />
-    <Compile Include="Assets\3. Enemies\enemy2\scripts\Bird.cs" />
+    <Compile Include="Assets\3. Enemies\Enemy2\Scripts\Bird.cs" />
+    <Compile Include="Assets\3. Enemies\Enemy2\Scripts\EnemyBird.cs" />
     <Compile Include="Assets\3. Enemies\HitBox.cs" />
     <Compile Include="Assets\3. Enemies\Scripts\BaseEnemy.cs" />
     <Compile Include="Assets\3. Enemies\Scripts\SpawnScripts\EnemyDB.cs" />
@@ -237,6 +238,7 @@
     <Compile Include="Assets\7.2DxFX\Scripts\2dxfx_AL\_2dxFX_AL_Twist.cs" />
     <Compile Include="Assets\7.2DxFX\Scripts\2dxfx_AL\_2dxFX_AL_WoodFX.cs" />
     <Compile Include="Assets\9.Bullet\Scritps\AimOneControl.cs" />
+    <Compile Include="Assets\9.Bullet\Scritps\AngleControl.cs" />
     <Compile Include="Assets\9.Bullet\Scritps\BaseBullet.cs" />
     <Compile Include="Assets\9.Bullet\Scritps\BulletControl.cs" />
     <Compile Include="Assets\9.Bullet\Scritps\CricleControl.cs" />
@@ -874,19 +876,19 @@
     <None Include="Assets\7.2DxFX\ExtraShaders\Shader\Burn.shader" />
     <None Include="Assets\Spine Examples\Spine\FootSoldier\Equipment\Equipment.atlas.txt" />
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>E:/ProjectUnity/UnityWorkshop/UnityFlatformWorkshop/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>E:/ProjectUnity/WorkShop/UnityFlatformWorkshop/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PackageManagerUI.Editor">
-      <HintPath>E:/ProjectUnity/UnityWorkshop/UnityFlatformWorkshop/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+      <HintPath>E:/ProjectUnity/WorkShop/UnityFlatformWorkshop/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>E:/ProjectUnity/UnityWorkshop/UnityFlatformWorkshop/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>E:/ProjectUnity/WorkShop/UnityFlatformWorkshop/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>E:/ProjectUnity/UnityWorkshop/UnityFlatformWorkshop/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>E:/ProjectUnity/WorkShop/UnityFlatformWorkshop/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.DataPrivacy">
-      <HintPath>E:/ProjectUnity/UnityWorkshop/UnityFlatformWorkshop/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
+      <HintPath>E:/ProjectUnity/WorkShop/UnityFlatformWorkshop/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -1090,55 +1092,55 @@
       <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json">
-      <HintPath>E:/ProjectUnity/UnityWorkshop/UnityFlatformWorkshop/Assets/5. Utilities/Newtonsoft.Json.dll</HintPath>
+      <HintPath>E:/ProjectUnity/WorkShop/UnityFlatformWorkshop/Assets/5. Utilities/Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="DemiLib">
-      <HintPath>E:/ProjectUnity/UnityWorkshop/UnityFlatformWorkshop/Assets/Demigiant/DemiLib/Core/DemiLib.dll</HintPath>
+      <HintPath>E:/ProjectUnity/WorkShop/UnityFlatformWorkshop/Assets/Demigiant/DemiLib/Core/DemiLib.dll</HintPath>
     </Reference>
     <Reference Include="DOTween">
-      <HintPath>E:/ProjectUnity/UnityWorkshop/UnityFlatformWorkshop/Assets/Demigiant/DOTween/DOTween.dll</HintPath>
+      <HintPath>E:/ProjectUnity/WorkShop/UnityFlatformWorkshop/Assets/Demigiant/DOTween/DOTween.dll</HintPath>
     </Reference>
     <Reference Include="DOTween43">
-      <HintPath>E:/ProjectUnity/UnityWorkshop/UnityFlatformWorkshop/Assets/Demigiant/DOTween/DOTween43.dll</HintPath>
+      <HintPath>E:/ProjectUnity/WorkShop/UnityFlatformWorkshop/Assets/Demigiant/DOTween/DOTween43.dll</HintPath>
     </Reference>
     <Reference Include="DOTween46">
-      <HintPath>E:/ProjectUnity/UnityWorkshop/UnityFlatformWorkshop/Assets/Demigiant/DOTween/DOTween46.dll</HintPath>
+      <HintPath>E:/ProjectUnity/WorkShop/UnityFlatformWorkshop/Assets/Demigiant/DOTween/DOTween46.dll</HintPath>
     </Reference>
     <Reference Include="DOTween50">
-      <HintPath>E:/ProjectUnity/UnityWorkshop/UnityFlatformWorkshop/Assets/Demigiant/DOTween/DOTween50.dll</HintPath>
+      <HintPath>E:/ProjectUnity/WorkShop/UnityFlatformWorkshop/Assets/Demigiant/DOTween/DOTween50.dll</HintPath>
     </Reference>
     <Reference Include="DOTweenPro">
-      <HintPath>E:/ProjectUnity/UnityWorkshop/UnityFlatformWorkshop/Assets/Demigiant/DOTweenPro/DOTweenPro.dll</HintPath>
+      <HintPath>E:/ProjectUnity/WorkShop/UnityFlatformWorkshop/Assets/Demigiant/DOTweenPro/DOTweenPro.dll</HintPath>
     </Reference>
     <Reference Include="Sirenix.OdinInspector.Attributes">
-      <HintPath>E:/ProjectUnity/UnityWorkshop/UnityFlatformWorkshop/Assets/Plugins/Sirenix/Assemblies/Sirenix.OdinInspector.Attributes.dll</HintPath>
+      <HintPath>E:/ProjectUnity/WorkShop/UnityFlatformWorkshop/Assets/Plugins/Sirenix/Assemblies/Sirenix.OdinInspector.Attributes.dll</HintPath>
     </Reference>
     <Reference Include="Sirenix.OdinInspector.Editor">
-      <HintPath>E:/ProjectUnity/UnityWorkshop/UnityFlatformWorkshop/Assets/Plugins/Sirenix/Assemblies/Sirenix.OdinInspector.Editor.dll</HintPath>
+      <HintPath>E:/ProjectUnity/WorkShop/UnityFlatformWorkshop/Assets/Plugins/Sirenix/Assemblies/Sirenix.OdinInspector.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Sirenix.Serialization.Config">
-      <HintPath>E:/ProjectUnity/UnityWorkshop/UnityFlatformWorkshop/Assets/Plugins/Sirenix/Assemblies/Sirenix.Serialization.Config.dll</HintPath>
+      <HintPath>E:/ProjectUnity/WorkShop/UnityFlatformWorkshop/Assets/Plugins/Sirenix/Assemblies/Sirenix.Serialization.Config.dll</HintPath>
     </Reference>
     <Reference Include="Sirenix.Serialization">
-      <HintPath>E:/ProjectUnity/UnityWorkshop/UnityFlatformWorkshop/Assets/Plugins/Sirenix/Assemblies/Sirenix.Serialization.dll</HintPath>
+      <HintPath>E:/ProjectUnity/WorkShop/UnityFlatformWorkshop/Assets/Plugins/Sirenix/Assemblies/Sirenix.Serialization.dll</HintPath>
     </Reference>
     <Reference Include="Sirenix.Utilities">
-      <HintPath>E:/ProjectUnity/UnityWorkshop/UnityFlatformWorkshop/Assets/Plugins/Sirenix/Assemblies/Sirenix.Utilities.dll</HintPath>
+      <HintPath>E:/ProjectUnity/WorkShop/UnityFlatformWorkshop/Assets/Plugins/Sirenix/Assemblies/Sirenix.Utilities.dll</HintPath>
     </Reference>
     <Reference Include="Sirenix.Utilities.Editor">
-      <HintPath>E:/ProjectUnity/UnityWorkshop/UnityFlatformWorkshop/Assets/Plugins/Sirenix/Assemblies/Sirenix.Utilities.Editor.dll</HintPath>
+      <HintPath>E:/ProjectUnity/WorkShop/UnityFlatformWorkshop/Assets/Plugins/Sirenix/Assemblies/Sirenix.Utilities.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Sirenix.Serialization.AOTGenerated">
-      <HintPath>E:/ProjectUnity/UnityWorkshop/UnityFlatformWorkshop/Assets/Plugins/Sirenix/Assemblies/AOT/Sirenix.Serialization.AOTGenerated.dll</HintPath>
+      <HintPath>E:/ProjectUnity/WorkShop/UnityFlatformWorkshop/Assets/Plugins/Sirenix/Assemblies/AOT/Sirenix.Serialization.AOTGenerated.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Editor">
-      <HintPath>E:/ProjectUnity/UnityWorkshop/UnityFlatformWorkshop/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
+      <HintPath>E:/ProjectUnity/WorkShop/UnityFlatformWorkshop/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.StandardEvents">
-      <HintPath>E:/ProjectUnity/UnityWorkshop/UnityFlatformWorkshop/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
+      <HintPath>E:/ProjectUnity/WorkShop/UnityFlatformWorkshop/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Tracker">
-      <HintPath>E:/ProjectUnity/UnityWorkshop/UnityFlatformWorkshop/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
+      <HintPath>E:/ProjectUnity/WorkShop/UnityFlatformWorkshop/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:/Program Files/Unity/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>

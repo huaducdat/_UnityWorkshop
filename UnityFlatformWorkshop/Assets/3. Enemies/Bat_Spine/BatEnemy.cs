@@ -6,7 +6,7 @@ using Spine;
 
 public class BatEnemy : BaseEnemySpine
 {
-
+    
     public float step = 10f;
     private bool isRun = false;
     public float deltaRun = 3f;
@@ -84,132 +84,147 @@ public class BatEnemy : BaseEnemySpine
 
     protected override void FindPlayer()
     {
-        float distance = Vector3.Distance(player.transform.position, transform.position);
 
-        if (distance > rangeFind)
+
+        if (transform.position.y <= player.transform.position.y + 0.5f)
         {
-            tempStep += step / 7 * Time.deltaTime;
-           
-            if (tempStep < deltaDistance)
-            {
-                TurnRight();
-                transform.position += new Vector3(step / 7 * Time.deltaTime, 0, 0);
-            }
-            if (tempStep >= deltaDistance)
-            {
-                TurnLeft();
-                transform.position -= new Vector3(step / 7 * Time.deltaTime, 0, 0);
-            }
-
-            if (tempStep >= 2 * deltaDistance) tempStep = 0;
+            transform.position += new Vector3(0, step / 5 * Time.deltaTime);
         }
-       
-        //Debug.Log(distance);
-        if (distance < rangeFind && distance > rangeRun && !isRun && count == 0)
+        else if(transform.position.y > player.transform.position.y)
         {
-            isRunAni = true;
-            countAni++;
-            
-            if(player.transform.position.x < transform.position.x)
+
+
+
+            float distance = Vector3.Distance(player.transform.position, transform.position);
+
+            //if (distance > rangeFind)
+            //{
+                tempStep += step / 7 * Time.deltaTime;
+
+                if (tempStep < deltaDistance)
+                {
+                    TurnRight();
+                    transform.position += new Vector3(step / 7 * Time.deltaTime, 0, 0);
+                }
+                if (tempStep >= deltaDistance)
+                {
+                    TurnLeft();
+                    transform.position -= new Vector3(step / 7 * Time.deltaTime, 0, 0);
+                }
+
+                if (tempStep >= 2 * deltaDistance) tempStep = 0;
+            //}
+
+            //Debug.Log(distance);
+            if (distance <= rangeFind && distance > rangeRun && !isRun && count == 0)
             {
-                TurnLeft();
-            }
-            else if(player.transform.position.x > transform.position.x)
-            {
-                TurnRight();
-            }
-            transform.position = Vector3.MoveTowards(transform.position, player.transform.position, step/5 * Time.deltaTime);
-            
-           
-            if (!wasFire)
-            {
-                wasFire = true;
-                Fire();
-                
-            }
+                isRunAni = true;
+                countAni++;
 
-        }
+                if (player.transform.position.x < transform.position.x)
+                {
+                    TurnLeft();
+                }
+                else if (player.transform.position.x > transform.position.x)
+                {
+                    TurnRight();
+                }
+                transform.position = Vector3.MoveTowards(transform.position, player.transform.position, step / 5 * Time.deltaTime);
 
 
-        if (countAni >= 2) countAni = 2;
-        if(isRunAni && countAni == 1)
-        {
-            SetRun();
-        }
+                if (!wasFire)
+                {
+                    wasFire = true;
+                    Fire();
 
-      
+                }
 
-
-
-
-
-
-
-
-        if (distance <= rangeRun)
-        {
-            isRun = true;
-           
-        }
-
-        if (isRun)
-        {
-            Vector3 dir = transform.position - player.transform.position;
-            transform.position += dir.normalized * step/2 * Time.deltaTime;
-            tempDeltaRun += step/2 * Time.deltaTime;
-        }
-
-        if(tempDeltaRun >= deltaRun)
-        {
-            isRun = false;
-            tempDeltaRun = 0;
-            count = 1;
-        }
-
-
-
-
-
-        if (!isRun && count == 1)
-        {
-           
-
-            if (player.transform.position.x < transform.position.x)
-            {
-                TurnLeft();
-            }
-            else if (player.transform.position.x > transform.position.x)
-            {
-                TurnRight();
-            }
-            transform.position = Vector3.MoveTowards(transform.position, player.transform.position, step / 5 * Time.deltaTime);
-
-            if (!wasFire)
-            {
-                wasFire = true;
-                Fire();
-                
             }
 
-           
+
+            if (countAni >= 2) countAni = 2;
+            if (isRunAni && countAni == 1)
+            {
+                SetRun();
+            }
+
+
+
+
+
+
+
+
+
+
+            if (distance <= rangeRun)
+            {
+                isRun = true;
+
+            }
+
+            if (isRun)
+            {
+                Vector3 dir = transform.position - player.transform.position;
+                transform.position += dir.normalized * step / 2 * Time.deltaTime;
+                tempDeltaRun += step / 2 * Time.deltaTime;
+            }
+
+            if (tempDeltaRun >= deltaRun)
+            {
+                isRun = false;
+                tempDeltaRun = 0;
+                count = 1;
+            }
+
+
+
+
+
+            if (!isRun && count == 1)
+            {
+
+
+                if (player.transform.position.x < transform.position.x)
+                {
+                    TurnLeft();
+                }
+                else if (player.transform.position.x > transform.position.x)
+                {
+                    TurnRight();
+                }
+                transform.position = Vector3.MoveTowards(transform.position, player.transform.position, step / 5 * Time.deltaTime);
+
+                if (!wasFire)
+                {
+                    wasFire = true;
+                    Fire();
+
+                }
+
+
+            }
+
+
+
+
+
+
+
+            //CDTime Fire
+            if (wasFire)
+            {
+                tempTime += Time.deltaTime;
+
+            }
+            if (tempTime >= timeFireCD)
+            {
+                wasFire = false;
+                tempTime = 0;
+
+            }
+
         }
-
-
-
-        //CDTime Fire
-        if (wasFire)
-        {
-            tempTime += Time.deltaTime;
-            
-        }
-        if (tempTime >= timeFireCD)
-        {
-            wasFire = false;
-            tempTime = 0;
-           
-        }
-
-
     }
 
     
