@@ -162,7 +162,7 @@ MonoBehaviour:
   animator: {fileID: 0}
   colorHurt: {fileID: 0}
   timeHurt: 1
-  isSpine: 0
+  isSpine: 1
   meshRenderer: {fileID: 0}
   channelR: 255
   channelG: 160
@@ -181,7 +181,7 @@ MonoBehaviour:
   playerTag: Player
   rangeFind: 5
   rangeRun: 2
-  timeFireCD: 2
+  timeFireCD: 1
   attackBox: {fileID: 0}
   speedMove: 0
   groundCheck: {fileID: 0}

@@ -116,7 +116,7 @@ MonoBehaviour:
   m_MinSize: {x: 917, y: 448}
   m_MaxSize: {x: 22012, y: 10024}
   vertical: 0
-  controlID: 4581
+  controlID: 426
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -141,7 +141,7 @@ MonoBehaviour:
   m_MinSize: {x: 202, y: 448}
   m_MaxSize: {x: 4002, y: 8048}
   vertical: 1
-  controlID: 4582
+  controlID: 650
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -300,7 +300,7 @@ MonoBehaviour:
     width: 1001
     height: 483
   m_PersistentViewDataDictionary: {fileID: 0}
-  m_MaximizeOnPlay: 1
+  m_MaximizeOnPlay: 0
   m_Gizmos: 0
   m_Stats: 0
   m_SelectedSizes: 05000000000000000000000000000000000000000000000000000000000000000000000000000000
@@ -586,9 +586,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 78470000
-      m_LastClickedID: 18296
-      m_ExpandedIDs: a8deffff4ee3fffff8e3ffff2ee4ffff3ce4ffff32e5ffffd8e5ffff0ee6ffff5ce7ffff74e7ffffaae7ffffd2e7ffff08e8ffff30e8ffff66e8ffffd0fbffffd2fbffff
+      m_SelectedIDs: 484d0000
+      m_LastClickedID: 19784
+      m_ExpandedIDs: 0ee6ffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -656,14 +656,14 @@ MonoBehaviour:
   m_LastFolders:
   - Assets/3. Enemies/Bat_Spine
   m_LastFoldersGridSize: 16
-  m_LastProjectPath: E:\ProjectUnity\WorkShop\UnityFlatformWorkshop
+  m_LastProjectPath: E:\ProjectUnity\UnityWorkshop\UnityFlatformWorkshop
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 322f0000
-    m_LastClickedID: 12082
-    m_ExpandedIDs: 00000000e22e000048300000643100004232000088320000f834000078350000aa350000e0350000483600009e3b000000ca9a3b
+    m_SelectedIDs: 2e460000
+    m_LastClickedID: 17966
+    m_ExpandedIDs: 00000000ee4500001847000018480000c4480000044900000a4b00007a4b0000a44b0000c44b00001c4c0000fc4d000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -691,7 +691,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000e22e000048300000643100004232000088320000f834000078350000aa350000e0350000483600009e3b000000ca9a3b
+    m_ExpandedIDs: 00000000ee4500001847000018480000c4480000044900000a4b00007a4b0000a44b0000c44b00001c4c0000fc4d000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 

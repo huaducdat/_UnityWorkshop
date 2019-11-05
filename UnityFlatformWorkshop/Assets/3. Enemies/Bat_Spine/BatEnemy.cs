@@ -168,6 +168,9 @@ public class BatEnemy : BaseEnemySpine
                 Vector3 dir = transform.position - player.transform.position;
                 transform.position += dir.normalized * step / 2 * Time.deltaTime;
                 tempDeltaRun += step / 2 * Time.deltaTime;
+                if (player.transform.position.x < transform.position.x) TurnRight();
+                if (player.transform.position.x > transform.position.x) TurnLeft();
+
             }
 
             if (tempDeltaRun >= deltaRun)
