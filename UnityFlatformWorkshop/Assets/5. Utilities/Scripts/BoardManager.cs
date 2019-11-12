@@ -50,7 +50,8 @@ public class BoardManager : MonoBehaviour
         {
             GameObject instance = Instantiate(blockPrefabs[gridPositions[i].ElementNo], new Vector3(gridPositions[i].PosX, gridPositions[i].PosY, -1), Quaternion.identity) as GameObject;
             instance.transform.SetParent(boardHolder);
-        }
+        }        
+        
     }
 
     private void ReadJsonLayoutData(int Level)

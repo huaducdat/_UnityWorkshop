@@ -26,26 +26,57 @@ public class MovingCamera : MonoBehaviour
     [SerializeField]
     
 
-    public Transform player;
+    public GameObject player;
 
 
     public float limitXCamera = 69f;
     public float limitYCamera = 1f;
-   
-    
+
+    void Start()
+    {
+        player = GameObject.FindGameObjectWithTag("Player"); 
+    }
 
 
-   
+    void Update()
+    {
+
+        CamTransForm();
+
+
+
+
+
+
+
+
+        //if (CanMove)
+        //{
+        //    transform.position += moveSpeed * Time.deltaTime;
+        //    deltaX += moveSpeed.x * Time.deltaTime;
+        //}
+        //if (deltaX >= backgroundStep.x)
+        //{
+        //    for (int i = 0; i < movingBackgrounds.Length; i++)
+        //    {
+        //        movingBackgrounds[i].transform.position += backgroundStep;
+        //    }
+        //    deltaX -= backgroundStep.x;
+        //}
+    }
+
+
+
 
     void CamTransForm()
     {
         //camera moving follow player
-        if (player.position.x < transform.position.x)
+        if (player.transform.position.x < transform.position.x)
         {
             if (transform.position.x < 0) return;
-            if (transform.position.x - player.position.x > freeStepX)
+            if (transform.position.x - player.transform.position.x > freeStepX)
             {
-                deltaXFree.x = transform.position.x - (player.position.x + freeStepX);
+                deltaXFree.x = transform.position.x - (player.transform.position.x + freeStepX);
 
                 transform.position -= deltaXFree;
             }
@@ -55,9 +86,9 @@ public class MovingCamera : MonoBehaviour
         {
             if (transform.position.x > limitXCamera) return;
 
-            if (player.position.x - transform.position.x > freeStepX)
+            if (player.transform.position.x - transform.position.x > freeStepX)
             {
-                deltaXFree.x = (player.position.x - freeStepX) - transform.position.x;
+                deltaXFree.x = (player.transform.position.x - freeStepX) - transform.position.x;
                 transform.position += deltaXFree;
             }
 
@@ -121,9 +152,9 @@ public class MovingCamera : MonoBehaviour
         if (player.transform.position.y > transform.position.y)
         {
             if (transform.position.y > limitYCamera) return;
-            if (player.position.y - transform.position.y > freeStepY)
+            if (player.transform.position.y - transform.position.y > freeStepY)
             {
-                deltaYFree.y = player.position.y - freeStepY - transform.position.y;
+                deltaYFree.y = player.transform.position.y - freeStepY - transform.position.y;
 
                 transform.position += deltaYFree;
             }
@@ -132,9 +163,9 @@ public class MovingCamera : MonoBehaviour
         else
         {
             if (transform.position.y < 0) return;
-            if (transform.position.y - player.position.y > freeStepY)
+            if (transform.position.y - player.transform.position.y > freeStepY)
             {
-                deltaYFree.y = transform.position.y - (player.position.y + freeStepY);
+                deltaYFree.y = transform.position.y - (player.transform.position.y + freeStepY);
 
                 transform.position -= deltaYFree;
             }
@@ -150,30 +181,5 @@ public class MovingCamera : MonoBehaviour
 
 
 
-    void Update()
-    {
-
-        CamTransForm();
-
-
-   
-
-
-
-
-
-        //if (CanMove)
-        //{
-        //    transform.position += moveSpeed * Time.deltaTime;
-        //    deltaX += moveSpeed.x * Time.deltaTime;
-        //}
-        //if (deltaX >= backgroundStep.x)
-        //{
-        //    for (int i = 0; i < movingBackgrounds.Length; i++)
-        //    {
-        //        movingBackgrounds[i].transform.position += backgroundStep;
-        //    }
-        //    deltaX -= backgroundStep.x;
-        //}
-    }
+  
 }

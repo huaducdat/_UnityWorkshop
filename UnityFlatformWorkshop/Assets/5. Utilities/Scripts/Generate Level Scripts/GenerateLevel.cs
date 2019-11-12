@@ -20,12 +20,25 @@ public class GenerateLevel : MonoBehaviour
     void Start()
     {
         generateButton.onClick.AddListener(GenerateListElement);
+
+        GameManager.instance.OnPlayerDead += ActionWhenPlayerDead;
     }
 
-
-    private void GenerateListElement()
+    private void OnDestroy()
     {
-       
+        GameManager.instance.OnPlayerDead -= ActionWhenPlayerDead;
+    }
+
+    private void ActionWhenPlayerDead()
+    {
+        // do something
+        Debug.Log("Player dead");
+    }
+
+    [SerializeField] private Text showText;
+    public void GenerateListElement()
+    {
+        showText.text = "1234";
 
 
         for (int i = 0; i < elementParent.childCount; i++)

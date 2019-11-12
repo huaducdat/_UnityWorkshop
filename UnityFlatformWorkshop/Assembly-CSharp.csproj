@@ -67,7 +67,8 @@
     <Compile Include="Assets\3. Enemies\BaseEnemySpine.cs" />
     <Compile Include="Assets\3. Enemies\Bat_Spine\BatEnemy.cs" />
     <Compile Include="Assets\3. Enemies\Enemy1\Scripts\EnemyMove.cs" />
-    <Compile Include="Assets\3. Enemies\enemy2\scripts\Bird.cs" />
+    <Compile Include="Assets\3. Enemies\Enemy2\Scripts\Bird.cs" />
+    <Compile Include="Assets\3. Enemies\Enemy2\Scripts\EnemyBird.cs" />
     <Compile Include="Assets\3. Enemies\HitBox.cs" />
     <Compile Include="Assets\3. Enemies\Scripts\BaseEnemy.cs" />
     <Compile Include="Assets\3. Enemies\Scripts\SpawnScripts\EnemyDB.cs" />
@@ -237,6 +238,7 @@
     <Compile Include="Assets\7.2DxFX\Scripts\2dxfx_AL\_2dxFX_AL_Twist.cs" />
     <Compile Include="Assets\7.2DxFX\Scripts\2dxfx_AL\_2dxFX_AL_WoodFX.cs" />
     <Compile Include="Assets\9.Bullet\Scritps\AimOneControl.cs" />
+    <Compile Include="Assets\9.Bullet\Scritps\AngleControl.cs" />
     <Compile Include="Assets\9.Bullet\Scritps\BaseBullet.cs" />
     <Compile Include="Assets\9.Bullet\Scritps\BulletControl.cs" />
     <Compile Include="Assets\9.Bullet\Scritps\CricleControl.cs" />
@@ -571,7 +573,9 @@
     <None Include="Assets\7.2DxFX\ExtraShaders\Shader\ColorBrightness.shader" />
     <None Include="Assets\7.2DxFX\ExtraShaders\Shader\TurnFire.shader" />
     <None Include="Assets\7.2DxFX\Resources\2dxfx_AL\_2dxFX_AL_Smoke.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\7.2DxFX\ExtraShaders\Shader\PixelExplosion.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
     <None Include="Assets\7.2DxFX\Resources\2dxfx_AL\_2dxFX_AL_CircleFade.shader" />
     <None Include="Assets\7.2DxFX\Resources\2dxfx_AL\_2dxFX_AL_NoiseAnimated.shader" />
     <None Include="Assets\7.2DxFX\Resources\_2dxFX_Sharpen.shader" />
@@ -630,6 +634,7 @@
     <None Include="Assets\7.2DxFX\ExtraShaders\Shader\CircleHole.shader" />
     <None Include="Assets\Spine Examples\Spine\Dragon\license.txt" />
     <None Include="Assets\7.2DxFX\Resources\_2dxFX_ColorChange.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />
     <None Include="Assets\7.2DxFX\Resources\_2dxFX_Cartoon.shader" />
     <None Include="Assets\Spine\spine-unity\Modules\Shaders\Straight Alpha\Spine-Straight-Skeleton-Tint.shader" />
     <None Include="Assets\7.2DxFX\Resources\_2dxFX_MetalFX.shader" />
@@ -658,6 +663,7 @@
     <None Include="Assets\7.2DxFX\ExtraShaders\Shader\Animated_Twist.shader" />
     <None Include="Assets\7.2DxFX\ExtraShaders\Shader\ColorHSV.shader" />
     <None Include="Assets\7.2DxFX\Resources\_2dxFX_Threshold.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
     <None Include="Assets\7.2DxFX\Resources\2dxfx_AL\_2dxFX_AL_Liquid.shader" />
     <None Include="Assets\7.2DxFX\Resources\2dxfx_AL\_2dxFX_AL_Twist.shader" />
     <None Include="Assets\7.2DxFX\Resources\_2dxFX_EnergyBar.shader" />
@@ -724,6 +730,7 @@
     <None Include="Assets\7.2DxFX\Resources\2dxfx_AL\_2dxFX_AL_Fire.shader" />
     <None Include="Assets\7.2DxFX\ExtraShaders\Shader\LightGlow.shader" />
     <None Include="Assets\unity-ui-extensions\Shaders\UIImageCrop.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
     <None Include="Assets\Spine\spine-unity\Shaders\Utility\Hidden-Spine-Bones.shader" />
     <None Include="Assets\7.2DxFX\ExtraShaders\Shader\SymbioseDistortionFix.shader" />
     <None Include="Assets\7.2DxFX\ExtraShaders\Shader\Additive.shader" />
@@ -731,8 +738,10 @@
     <None Include="Assets\7.2DxFX\ExtraShaders\Shader\Fluo.shader" />
     <None Include="Assets\7.2DxFX\ExtraShaders\Shader\FishEye.shader" />
     <None Include="Assets\7.2DxFX\Resources\2dxfx_AL\_2dxFX_AL_GoldFX.shader" />
+    <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
     <None Include="Assets\7.2DxFX\Resources\_2dxFX_PixelDie.shader" />
     <None Include="Assets\Spine\spine-unity\Modules\Shaders\Sprite\SpritesVertexLit.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Masking.shader" />
     <None Include="Assets\7.2DxFX\Resources\_2dxFX_WaterAndBackgroundDeluxe.shader" />
     <None Include="Assets\7.2DxFX\ExtraShaders\Shader\DisolveHDR.shader" />
     <None Include="Assets\unity-ui-extensions\Shaders\UILinearDodge.shader" />
@@ -755,6 +764,7 @@
     <None Include="Assets\7.2DxFX\ExtraShaders\Shader\Automatic2spritesLerp.shader" />
     <None Include="Assets\7.2DxFX\Resources\_2dxFX_FlameAdditive.shader" />
     <None Include="Assets\7.2DxFX\ExtraShaders\Shader\Threshold.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Mobile.shader" />
     <None Include="Assets\7.2DxFX\Resources\_2dxFX_Fire.shader" />
     <None Include="Assets\7.2DxFX\ExtraShaders\Shader\TurnMetal.shader" />
     <None Include="Assets\Spine\spine-unity\Modules\Shaders\Sprite\SpriteShadows.cginc" />
@@ -775,6 +785,7 @@
     <None Include="Assets\7.2DxFX\Resources\2dxfx_AL\_2dxFX_AL_Lightning.shader" />
     <None Include="Assets\7.2DxFX\Resources\2dxfx_AL\_2dxFX_AL_PlasmaShield.shader" />
     <None Include="Assets\7.2DxFX\ExtraShaders\Shader\PixelisationXY.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF Overlay.shader" />
     <None Include="Assets\7.2DxFX\ExtraShaders\Shader\CompressionTintAdditive.shader" />
     <None Include="Assets\7.2DxFX\ExtraShaders\Shader\InnerGlow.shader" />
     <None Include="Assets\Spine\spine-unity\Modules\Shaders\Sprite\CameraDepthNormalsTexture.shader" />
@@ -794,6 +805,7 @@
     <None Include="Assets\Spine\spine-unity\Modules\SkeletonGraphic\Shaders\Spine-SkeletonGraphic.shader" />
     <None Include="Assets\Spine\spine-unity\Shaders\Spine-Skeleton.shader" />
     <None Include="Assets\7.2DxFX\Resources\_2dxFX_Hologram3.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Surface.cginc" />
     <None Include="Assets\7.2DxFX\ExtraShaders\Shader\Holographic.shader" />
     <None Include="Assets\unity-ui-extensions\Shaders\UIMultiply.shader" />
     <None Include="Assets\7.2DxFX\Resources\_2dxFX_Offset.shader" />
@@ -804,6 +816,7 @@
     <None Include="Assets\7.2DxFX\ExtraShaders\Shader\GhostClipping.shader" />
     <None Include="Assets\7.2DxFX\ExtraShaders\Shader\TurnToInfinite.shader" />
     <None Include="Assets\7.2DxFX\Resources\2dxfx_AL\_2dxFX_AL_ColorRGB.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Overlay.shader" />
     <None Include="Assets\7.2DxFX\Resources\_2dxFX_BlurHQX.shader" />
     <None Include="Assets\7.2DxFX\Resources\_2dxFX_Pixel.shader" />
     <None Include="Assets\7.2DxFX\Resources\_2dxFX_Jelly.shader" />
@@ -821,6 +834,8 @@
     <None Include="Assets\7.2DxFX\Resources\_2dxFX_Frozen.shader" />
     <None Include="Assets\7.2DxFX\ExtraShaders\Shader\RetroCGA.shader" />
     <None Include="Assets\7.2DxFX\Resources\2dxfx_AL\_2dxFX_AL_Blur.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
     <None Include="Assets\7.2DxFX\Resources\_2dxFX_Distortion_Additive.shader" />
     <None Include="Assets\7.2DxFX\Resources\_2dxFX_ColorRGB.shader" />
     <None Include="Assets\7.2DxFX\Resources\2dxfx_AL\_2dxFX_AL_Hologram3.shader" />
@@ -834,6 +849,7 @@
     <None Include="Assets\7.2DxFX\ExtraShaders\Shader\Emboss.shader" />
     <None Include="Assets\7.2DxFX\Resources\_2dxFX_PlasmaRainbow.shader" />
     <None Include="Assets\7.2DxFX\ExtraShaders\Shader\HologramParasiteTint.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF.shader" />
     <None Include="Assets\7.2DxFX\ExtraShaders\Shader\TurnGold.shader" />
     <None Include="Assets\7.2DxFX\Resources\_2dxFX_Distortion.shader" />
     <None Include="Assets\7.2DxFX\Resources\_2dxFX_Lightning.shader" />
@@ -842,6 +858,7 @@
     <None Include="Assets\Spine\spine-unity\Modules\SlotBlendModes\Spine-Skeleton-PMA-Multiply.shader" />
     <None Include="Assets\Spine Examples\Spine\Hero\hero-pro.atlas.txt" />
     <None Include="Assets\7.2DxFX\Resources\_2dxFX_Sepia.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile.shader" />
     <None Include="Assets\Spine\spine-unity\Modules\Shaders\Sprite\CGIncludes\ShaderMaths.cginc" />
     <None Include="Assets\7.2DxFX\ExtraShaders\Shader\BreakingMirror.shader" />
     <None Include="Assets\7.2DxFX\ExtraShaders\Shader\Fusion2SpritesAdditive.shader" />
@@ -856,6 +873,7 @@
     <None Include="Assets\7.2DxFX\Resources\_2dxFX_Twist.shader" />
     <None Include="Assets\7.2DxFX\Resources\2dxfx_AL\_2dxFX_AL_Pixel8bitsBW.shader" />
     <None Include="Assets\Spine\spine-unity\Shaders\Spine-SkeletonLit.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Sprite.shader" />
     <None Include="Assets\7.2DxFX\ExtraShaders\Shader\Pinch.shader" />
     <None Include="Assets\Spine\spine-unity\Modules\Shaders\Sprite\CGIncludes\SpriteSpecular.cginc" />
     <None Include="Assets\7.2DxFX\ExtraShaders\Shader\Pixelisation.shader" />
@@ -864,6 +882,7 @@
     <None Include="Assets\7.2DxFX\ExtraShaders\Shader\HologramScanLineAdditive.shader" />
     <None Include="Assets\7.2DxFX\ExtraShaders\Shader\HologramParasiteAdditive.shader" />
     <None Include="Assets\7.2DxFX\Resources\2dxfx_AL\_2dxFX_AL_Normal.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface.shader" />
     <None Include="Assets\7.2DxFX\ExtraShaders\Shader\Animated_Zoom.shader" />
     <None Include="Assets\7.2DxFX\ExtraShaders\Shader\BreakingGlass.shader" />
     <None Include="Assets\7.2DxFX\ExtraShaders\Shader\Blur.shader" />
@@ -874,19 +893,19 @@
     <None Include="Assets\7.2DxFX\ExtraShaders\Shader\Burn.shader" />
     <None Include="Assets\Spine Examples\Spine\FootSoldier\Equipment\Equipment.atlas.txt" />
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>E:/ProjectUnity/UnityWorkshop/UnityFlatformWorkshop/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>E:/ProjectUnity/WorkShop/UnityFlatformWorkshop/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PackageManagerUI.Editor">
-      <HintPath>E:/ProjectUnity/UnityWorkshop/UnityFlatformWorkshop/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+      <HintPath>E:/ProjectUnity/WorkShop/UnityFlatformWorkshop/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>E:/ProjectUnity/UnityWorkshop/UnityFlatformWorkshop/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>E:/ProjectUnity/WorkShop/UnityFlatformWorkshop/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>E:/ProjectUnity/UnityWorkshop/UnityFlatformWorkshop/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>E:/ProjectUnity/WorkShop/UnityFlatformWorkshop/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.DataPrivacy">
-      <HintPath>E:/ProjectUnity/UnityWorkshop/UnityFlatformWorkshop/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
+      <HintPath>E:/ProjectUnity/WorkShop/UnityFlatformWorkshop/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -1090,55 +1109,55 @@
       <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json">
-      <HintPath>E:/ProjectUnity/UnityWorkshop/UnityFlatformWorkshop/Assets/5. Utilities/Newtonsoft.Json.dll</HintPath>
+      <HintPath>E:/ProjectUnity/WorkShop/UnityFlatformWorkshop/Assets/5. Utilities/Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="DemiLib">
-      <HintPath>E:/ProjectUnity/UnityWorkshop/UnityFlatformWorkshop/Assets/Demigiant/DemiLib/Core/DemiLib.dll</HintPath>
+      <HintPath>E:/ProjectUnity/WorkShop/UnityFlatformWorkshop/Assets/Demigiant/DemiLib/Core/DemiLib.dll</HintPath>
     </Reference>
     <Reference Include="DOTween">
-      <HintPath>E:/ProjectUnity/UnityWorkshop/UnityFlatformWorkshop/Assets/Demigiant/DOTween/DOTween.dll</HintPath>
+      <HintPath>E:/ProjectUnity/WorkShop/UnityFlatformWorkshop/Assets/Demigiant/DOTween/DOTween.dll</HintPath>
     </Reference>
     <Reference Include="DOTween43">
-      <HintPath>E:/ProjectUnity/UnityWorkshop/UnityFlatformWorkshop/Assets/Demigiant/DOTween/DOTween43.dll</HintPath>
+      <HintPath>E:/ProjectUnity/WorkShop/UnityFlatformWorkshop/Assets/Demigiant/DOTween/DOTween43.dll</HintPath>
     </Reference>
     <Reference Include="DOTween46">
-      <HintPath>E:/ProjectUnity/UnityWorkshop/UnityFlatformWorkshop/Assets/Demigiant/DOTween/DOTween46.dll</HintPath>
+      <HintPath>E:/ProjectUnity/WorkShop/UnityFlatformWorkshop/Assets/Demigiant/DOTween/DOTween46.dll</HintPath>
     </Reference>
     <Reference Include="DOTween50">
-      <HintPath>E:/ProjectUnity/UnityWorkshop/UnityFlatformWorkshop/Assets/Demigiant/DOTween/DOTween50.dll</HintPath>
+      <HintPath>E:/ProjectUnity/WorkShop/UnityFlatformWorkshop/Assets/Demigiant/DOTween/DOTween50.dll</HintPath>
     </Reference>
     <Reference Include="DOTweenPro">
-      <HintPath>E:/ProjectUnity/UnityWorkshop/UnityFlatformWorkshop/Assets/Demigiant/DOTweenPro/DOTweenPro.dll</HintPath>
+      <HintPath>E:/ProjectUnity/WorkShop/UnityFlatformWorkshop/Assets/Demigiant/DOTweenPro/DOTweenPro.dll</HintPath>
     </Reference>
     <Reference Include="Sirenix.OdinInspector.Attributes">
-      <HintPath>E:/ProjectUnity/UnityWorkshop/UnityFlatformWorkshop/Assets/Plugins/Sirenix/Assemblies/Sirenix.OdinInspector.Attributes.dll</HintPath>
+      <HintPath>E:/ProjectUnity/WorkShop/UnityFlatformWorkshop/Assets/Plugins/Sirenix/Assemblies/Sirenix.OdinInspector.Attributes.dll</HintPath>
     </Reference>
     <Reference Include="Sirenix.OdinInspector.Editor">
-      <HintPath>E:/ProjectUnity/UnityWorkshop/UnityFlatformWorkshop/Assets/Plugins/Sirenix/Assemblies/Sirenix.OdinInspector.Editor.dll</HintPath>
+      <HintPath>E:/ProjectUnity/WorkShop/UnityFlatformWorkshop/Assets/Plugins/Sirenix/Assemblies/Sirenix.OdinInspector.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Sirenix.Serialization.Config">
-      <HintPath>E:/ProjectUnity/UnityWorkshop/UnityFlatformWorkshop/Assets/Plugins/Sirenix/Assemblies/Sirenix.Serialization.Config.dll</HintPath>
+      <HintPath>E:/ProjectUnity/WorkShop/UnityFlatformWorkshop/Assets/Plugins/Sirenix/Assemblies/Sirenix.Serialization.Config.dll</HintPath>
     </Reference>
     <Reference Include="Sirenix.Serialization">
-      <HintPath>E:/ProjectUnity/UnityWorkshop/UnityFlatformWorkshop/Assets/Plugins/Sirenix/Assemblies/Sirenix.Serialization.dll</HintPath>
+      <HintPath>E:/ProjectUnity/WorkShop/UnityFlatformWorkshop/Assets/Plugins/Sirenix/Assemblies/Sirenix.Serialization.dll</HintPath>
     </Reference>
     <Reference Include="Sirenix.Utilities">
-      <HintPath>E:/ProjectUnity/UnityWorkshop/UnityFlatformWorkshop/Assets/Plugins/Sirenix/Assemblies/Sirenix.Utilities.dll</HintPath>
+      <HintPath>E:/ProjectUnity/WorkShop/UnityFlatformWorkshop/Assets/Plugins/Sirenix/Assemblies/Sirenix.Utilities.dll</HintPath>
     </Reference>
     <Reference Include="Sirenix.Utilities.Editor">
-      <HintPath>E:/ProjectUnity/UnityWorkshop/UnityFlatformWorkshop/Assets/Plugins/Sirenix/Assemblies/Sirenix.Utilities.Editor.dll</HintPath>
+      <HintPath>E:/ProjectUnity/WorkShop/UnityFlatformWorkshop/Assets/Plugins/Sirenix/Assemblies/Sirenix.Utilities.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Sirenix.Serialization.AOTGenerated">
-      <HintPath>E:/ProjectUnity/UnityWorkshop/UnityFlatformWorkshop/Assets/Plugins/Sirenix/Assemblies/AOT/Sirenix.Serialization.AOTGenerated.dll</HintPath>
+      <HintPath>E:/ProjectUnity/WorkShop/UnityFlatformWorkshop/Assets/Plugins/Sirenix/Assemblies/AOT/Sirenix.Serialization.AOTGenerated.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Editor">
-      <HintPath>E:/ProjectUnity/UnityWorkshop/UnityFlatformWorkshop/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
+      <HintPath>E:/ProjectUnity/WorkShop/UnityFlatformWorkshop/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.StandardEvents">
-      <HintPath>E:/ProjectUnity/UnityWorkshop/UnityFlatformWorkshop/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
+      <HintPath>E:/ProjectUnity/WorkShop/UnityFlatformWorkshop/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Tracker">
-      <HintPath>E:/ProjectUnity/UnityWorkshop/UnityFlatformWorkshop/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
+      <HintPath>E:/ProjectUnity/WorkShop/UnityFlatformWorkshop/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:/Program Files/Unity/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
