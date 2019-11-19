@@ -21,7 +21,11 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 2}
+<<<<<<< HEAD
+  m_MinSize: {x: 950, y: 300}
+=======
   m_MinSize: {x: 950, y: 498}
+>>>>>>> parent of 987fb96... Update!!
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -45,7 +49,11 @@ MonoBehaviour:
     y: 0
     width: 1920
     height: 997
+<<<<<<< HEAD
+  m_MinSize: {x: 950, y: 300}
+=======
   m_MinSize: {x: 950, y: 498}
+>>>>>>> parent of 987fb96... Update!!
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &3
 MonoBehaviour:
@@ -116,7 +124,11 @@ MonoBehaviour:
   m_MinSize: {x: 917, y: 448}
   m_MaxSize: {x: 22012, y: 10024}
   vertical: 0
+<<<<<<< HEAD
+  controlID: 115
+=======
   controlID: 4149
+>>>>>>> parent of 987fb96... Update!!
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -141,7 +153,11 @@ MonoBehaviour:
   m_MinSize: {x: 202, y: 448}
   m_MaxSize: {x: 4002, y: 8048}
   vertical: 1
+<<<<<<< HEAD
+  controlID: 147
+=======
   controlID: 4049
+>>>>>>> parent of 987fb96... Update!!
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -586,9 +602,15 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
+<<<<<<< HEAD
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: d2fbffff
+=======
       m_SelectedIDs: becaffff
       m_LastClickedID: -13634
       m_ExpandedIDs: c0caffffdef0ffffc6faffff5cfbffffbc3f00003e40000096490000b2510000
+>>>>>>> parent of 987fb96... Update!!
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -660,10 +682,17 @@ MonoBehaviour:
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
+<<<<<<< HEAD
+    scrollPos: {x: 0, y: 6}
+    m_SelectedIDs: 02310000
+    m_LastClickedID: 12546
+    m_ExpandedIDs: 0000000002310000783200009a33000080340000c83400007a3500004637000052370000d63700000a38000042380000ac3800003c390000203a0000963e000000ca9a3b
+=======
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: be490000
     m_LastClickedID: 18878
     m_ExpandedIDs: 000000002e310000a0320000be330000a0340000e634000070370000f4370000283800005e380000c6380000563900008a3e000000ca9a3b
+>>>>>>> parent of 987fb96... Update!!
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -691,7 +720,11 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
+<<<<<<< HEAD
+    m_ExpandedIDs: 0000000002310000783200009a33000080340000c83400007a3500004637000052370000d63700000a38000042380000ac3800003c390000203a0000963e0000
+=======
     m_ExpandedIDs: 000000002e310000a0320000be330000a0340000e634000070370000f4370000283800005e380000c6380000563900008a3e000000ca9a3b
+>>>>>>> parent of 987fb96... Update!!
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 

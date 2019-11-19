@@ -1,4 +1,8 @@
 sceneSetups:
+<<<<<<< HEAD
+- path: Assets/1.Scenes/Spine_EnemyBat.unity
+=======
 - path: Assets/1.Scenes/Levels/Level_1.unity
+>>>>>>> parent of 987fb96... Update!!
   isLoaded: 1
   isActive: 1
